@@ -24,13 +24,14 @@ vector<vector<string>> intern(vector<string>str){
     int n=str.size();
     vector<vector<string>>ans;
     for(int i=0;i<n;i++){
+        vector<string>vec;
         for(int j=0;j<n;j++){
-            vector<string>vec;
+           
             if(isana(str[i],str[j]) and i!=j){
                 vec.push_back(str[j]);
             }
-            ans.push_back(vec);
         }
+        ans.push_back(vec);
     }
     return ans;
 }
